@@ -3,6 +3,16 @@
 All notable changes to Dockyard. The format follows [Keep a Changelog](https://keepachangelog.com/), and versions
 follow [Semantic Versioning](https://semver.org/).
 
+## [0.1.2] - 2026-10-17
+
+### Added
+- **Dashboard**, now the first page: how busy this PC is (processor load as a gauge with the last minute and a half as a chart, memory, the drive Dockyard lives on, network address and speed), your services as tiles you can start and stop, and your websites with open, folder and terminal buttons.
+- **About** page: version, check for updates, release notes, report an issue, copy diagnostics.
+- `dockyard stats` prints the same numbers in a terminal (`--json` for scripts).
+
+### Changed
+- Dockyard opens on the Dashboard instead of Services. The menu scrolls when the window is short, so all nine items stay reachable.
+
 ## [0.1.1] - 2026-10-17
 
 ### Added
