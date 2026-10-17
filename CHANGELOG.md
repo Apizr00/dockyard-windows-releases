@@ -3,6 +3,18 @@
 All notable changes to Dockyard. The format follows [Keep a Changelog](https://keepachangelog.com/), and versions
 follow [Semantic Versioning](https://semver.org/).
 
+## [0.2.1] - 2026-10-17
+
+### Added
+- **MinIO**, an S3-compatible object store for local development (buckets, presigned URLs, the same SDK calls as production). Install it from the Runtimes page; it appears on the Services page and the Dashboard like the other services, with a settings dialog (S3 and console ports, this PC only or the whole network, root user, data folder, and the root password: show, copy, make a new one or type your own). The password is made at the first start and kept in Windows Credential Manager, never in a file. `dockyard minio show|set|password` do the same from a terminal.
+  **Read this first:** MinIO stopped publishing community builds in October 2025 and archived its repository in April 2026, so the version Dockyard installs is the *last community release that has a Windows program* (2025-09-07, AGPL-3.0). It is marked end of life, the dialog says so, and a later security fix (a session-policy bypass for service accounts) is not in it. Keep it on this PC for development.
+
+### Changed
+- The PHP service is now called "PHP" instead of "PHP pool".
+
+### Fixed
+- **An update now replaces the copy of Dockyard that is running.** The installer remembers where it installed in one place for the whole PC, and anything else that ran a copy of it (a test, a second copy) could leave that pointing at another folder, so an update landed there and the app you start stayed as it was. Dockyard now tells the installer which folder it is running from.
+
 ## [0.2.0] - 2026-10-17
 
 ### Added
