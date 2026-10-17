@@ -3,6 +3,17 @@
 All notable changes to Dockyard. The format follows [Keep a Changelog](https://keepachangelog.com/), and versions
 follow [Semantic Versioning](https://semver.org/).
 
+## [0.2.3] - 2026-10-17
+
+### Changed
+- **A tidier interface on every page.**
+  - *The menu* fits the default window: all fourteen items are visible without scrolling, and the root folder is back in its corner.
+  - *Category pages* (Database, Languages, Email, Web Server, Storage, Tunnel) have a header card with the product, its status and Start, Stop and Restart; the settings sit in a card below it; a product that is missing shows a centred "not installed" message with an Install button (the Install button of a missing product in the list is now on its card, not stacked under it). Pages with a single product (Email, Web Server, Storage, Tunnel) no longer waste a column on a list of one.
+  - *Lists open and close:* the categories on the Package page, the SQL and NoSQL groups on the Database page, and a product's versions can be collapsed with their arrow; Dockyard remembers which are open.
+  - *Package* rows are cards with the name, status and Activate switch on one line and the version, process and buttons under them; the table with its column headings appears on wide windows.
+  - *Settings* is one card per section instead of one long card, and the Redis Browser's empty page has the same centred message.
+  - *About* is a centred card: the icon, the name and version, who makes it, and the GitHub, User guide and Changelog buttons; updates, help and this copy's details sit below it.
+
 ## [0.2.2] - 2026-10-17
 
 ### Changed
