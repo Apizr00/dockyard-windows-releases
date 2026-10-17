@@ -3,6 +3,14 @@
 All notable changes to Dockyard. The format follows [Keep a Changelog](https://keepachangelog.com/), and versions
 follow [Semantic Versioning](https://semver.org/).
 
+## [0.2.4] - 2026-10-17
+
+### Added
+- **Flush Redis in one click.** *Database → Redis* has a **Flush all data** button (it asks first and empties every database), and the Redis Browser's **Flush…** button now offers *this database only* or *all databases*. On the command line: `dockyard redis del --flush-all`. It works even when the database you are looking at is empty but another is not.
+
+### Fixed
+- **The Redis Browser looked bare** when it was opened before the SQL Client: the tabs were plain grey boxes, tables and notes were unstyled and the "Pick a key" message sat against the left edge. It has the same look whichever page you open first, with a proper empty state and a *New key* button.
+
 ## [0.2.3] - 2026-10-17
 
 ### Changed
