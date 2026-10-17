@@ -3,6 +3,19 @@
 All notable changes to Dockyard. The format follows [Keep a Changelog](https://keepachangelog.com/), and versions
 follow [Semantic Versioning](https://semver.org/).
 
+## [0.2.0] - 2026-10-17
+
+### Added
+- **Packages page: every version of MySQL, MariaDB and PostgreSQL, side by side.** MySQL 5.5 to 9.7, MariaDB 10.6 to 12.3 and PostgreSQL 12 to 18 can be installed together. Each version is its own service (`mysql-8.4`, `postgres-17`) with its own data folder, port, log and settings, and several can run at once. Old and end-of-life versions are marked and hidden until you ask for them. `mysql`, `mariadb` and `postgres` still mean the default version, so scripts, autostart lists and the built-in `local-mysql` style connections keep working.
+- **A settings page for each server:** port, who may connect (this PC only, or the whole network once a password is set), data folder, tuning dropdowns and extra configuration lines, and the administrator password (set, remove, or reset a forgotten one). Passwords are kept in Windows Credential Manager. `dockyard packages` and `dockyard db-server list|show|set|password|reset-password` do the same from a terminal.
+- A data folder is stamped with its version and a different version refuses to use it; the single data folder of earlier builds is moved into the folder of the version that made it, the first time that version starts. Installing a newer version never changes which version is the default.
+
+### Fixed
+- The first-run setup showed the "Pick your stack" list centred, with each switch under its label; the rows now line up.
+
+### Changed
+- The Services, Dashboard, Logs and Database pages list one entry per database version.
+
 ## [0.1.3] - 2026-10-17
 
 ### Added
