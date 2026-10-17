@@ -3,6 +3,17 @@
 All notable changes to Dockyard. The format follows [Keep a Changelog](https://keepachangelog.com/), and versions
 follow [Semantic Versioning](https://semver.org/).
 
+## [0.1.3] - 2026-10-17
+
+### Added
+- **Update popup.** Each time Dockyard starts it quietly checks for a newer version (and again once a day while it keeps running). If there is none, you see nothing. If there is, a popup offers **Update now**, **Remind me later** (it asks again at the next start) or **Skip this version** (quiet until a newer one comes out). Settings shows a skipped version and can offer it again; `dockyard update skip|unskip|remind` do the same from a terminal. The check can still be switched off.
+
+### Changed
+- **Redis is real Redis now.** Dockyard installs Redis 8.x, 7.x or 6.2 (the official source built for Windows by the `redis-windows` project), from the Runtimes page, instead of a Redis-compatible server. It keeps its data across restarts, and Lua scripts (which Laravel's queues, locks and rate limiting use), Streams and the other commands work. It idles at about 9 MB. **If you had the earlier Redis-compatible server installed, install Redis from Runtimes: that server is no longer offered or started.**
+
+### Fixed
+- `dockyard update auto off` no longer answers "the update was installed".
+
 ## [0.1.2] - 2026-10-17
 
 ### Added
