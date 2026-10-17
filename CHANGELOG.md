@@ -3,6 +3,11 @@
 All notable changes to Dockyard. The format follows [Keep a Changelog](https://keepachangelog.com/), and versions
 follow [Semantic Versioning](https://semver.org/).
 
+## [0.2.5] - 2026-10-18
+
+### Changed
+- **Dockyard remembers what was running.** When it starts, it brings back the services you had running last time (Redis and MinIO included), and leaves stopped the ones you stopped. Before, only the short fixed list chosen in the setup wizard started, so a service you had started yourself was gone after a restart. Quitting from the tray, an update and Windows shutting down do not count as you stopping things; *Stop all* and the Stop buttons do. The first start after this update has nothing remembered yet and follows the old list, then it remembers from there. The services start side by side, as before (about 0.6 s for a couple of them).
+
 ## [0.2.4] - 2026-10-17
 
 ### Added
