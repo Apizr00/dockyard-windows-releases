@@ -3,6 +3,11 @@
 All notable changes to Dockyard. The format follows [Keep a Changelog](https://keepachangelog.com/), and versions
 follow [Semantic Versioning](https://semver.org/).
 
+## [0.2.2] - 2026-10-17
+
+### Changed
+- **The menu is organised by category, like the stack apps it is modelled on.** One page per kind of thing: *Database* (SQL: MySQL, MariaDB, PostgreSQL; NoSQL: Redis), *Languages* (PHP, Node.js, Composer), *Email* (Mailpit), *Web Server* (Nginx), *Tunnel* (Cloudflare Tunnel) and *Storage* (MinIO). Each lists its products on the left (every installed database version under its product, and an *Install* button for what is missing) and shows the settings of the chosen one on the right, in the page instead of a dialog. A new **Package** page is the one place to install, update, remove, make default, start and stop: a table of Package Name, Version, Status, PID, Activate and Control for every version, grouped by category. It replaces the overlapping *Runtimes*, *Packages* and *Services* pages. The database client is now *SQL Client*, the key browser *Redis Browser*, and Sites is *Website*. `dockyard runtimes` and `dockyard packages` are unchanged.
+
 ## [0.2.1] - 2026-10-17
 
 ### Added
