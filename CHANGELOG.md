@@ -3,6 +3,18 @@
 All notable changes to Dockyard. The format follows [Keep a Changelog](https://keepachangelog.com/), and versions
 follow [Semantic Versioning](https://semver.org/).
 
+## [0.1.1] - 2026-10-17
+
+### Added
+- **MySQL 8.4 LTS** can be installed from the Runtimes page (the service existed, but nothing offered the download).
+- The built-in list of runtimes now includes Garnet 2.2.3 (the Redis-compatible server).
+
+### Changed
+- **Dockyard opens at a smaller size** (900 × 600, centred) instead of 1280 × 800.
+
+### Fixed
+- Right-click menus in the database client no longer run off the edge of a small window.
+
 ## [0.1.0] - 2026-10-17
 
 First release. Pre-release quality: see the README for what is and is not verified.
