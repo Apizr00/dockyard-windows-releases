@@ -3,6 +3,11 @@
 All notable changes to Dockyard. The format follows [Keep a Changelog](https://keepachangelog.com/), and versions
 follow [Semantic Versioning](https://semver.org/).
 
+## [0.2.6] - 2026-10-18
+
+### Added
+- **How long Start all and Stop all took, back on the Dashboard** (it was on the Services page, which is gone). Under "4 of 4 services running · 1 site" it says "Started in 0.6 s" after starting (also when Dockyard brings your services back at launch) and "Stopped in 0.3 s" after stopping, one at a time, for whichever you did last.
+
 ## [0.2.5] - 2026-10-18
 
 ### Changed
