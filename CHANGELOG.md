@@ -3,6 +3,12 @@
 All notable changes to Dockyard. The format follows [Keep a Changelog](https://keepachangelog.com/), and versions
 follow [Semantic Versioning](https://semver.org/).
 
+## [0.2.7] - 2026-10-18
+
+### Added
+- **Each package has its own logo** instead of two letters: MySQL, MariaDB, PostgreSQL, Redis, PHP, Node.js, Nginx, MinIO and Cloudflare Tunnel show their logo, and Composer, Xdebug and Mailpit a plain symbol. They appear in the Package list and table, on the product cards and version entries of the category pages, in each page's header, on the Dashboard's service tiles, in the Logs filter, beside PHP, Xdebug, Mail and Share on the Sites and Settings pages, and in the Sites table. The Running/Not installed dot sits on the logo's corner, so product names are no longer cut off.
+- **More Node.js versions:** 26 (current), 25, 24, 22, 20 and 18 (before: 24 and 22). 25, 20 and 18 are marked end of life; 25 and 18 stay under *Show older versions*.
+
 ## [0.2.6] - 2026-10-18
 
 ### Added

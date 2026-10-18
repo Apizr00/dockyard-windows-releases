@@ -16,14 +16,14 @@
 Drop a folder into `www\` and get `https://name.test`, with the PHP version you pick, in about a second. One tray icon runs
 nginx, PHP, MariaDB/MySQL/PostgreSQL, Redis and Mailpit; the tray alone uses about 9 MB of memory.
 
-> **Status:** version 0.2.6, pre-release quality. The installer is **not code-signed yet**, so Windows SmartScreen
+> **Status:** version 0.2.7, pre-release quality. The installer is **not code-signed yet**, so Windows SmartScreen
 > may warn the first time you run it (*More info → Run anyway*; compare the download with `SHA256SUMS.txt`). `.test` names
 > and a fresh-machine install have been verified only in scripted tests, not on a clean computer.
 
 ### Install
 
-1. Download **`Dockyard_0.2.6_x64-setup.exe`** from the [latest release](https://github.com/Apizr00/dockyard-windows-releases/releases/latest). It installs for your account only and needs no administrator rights.
-   Prefer no installer? Download **`Dockyard_0.2.6_x64_portable.zip`**, unzip it anywhere and run `dockyard.exe`; its data stays in a `dockyard-data` folder beside it.
+1. Download **`Dockyard_0.2.7_x64-setup.exe`** from the [latest release](https://github.com/Apizr00/dockyard-windows-releases/releases/latest). It installs for your account only and needs no administrator rights.
+   Prefer no installer? Download **`Dockyard_0.2.7_x64_portable.zip`**, unzip it anywhere and run `dockyard.exe`; its data stays in a `dockyard-data` folder beside it.
 2. The first run walks through the folder, the stack and `.test` or `.localhost`, and ends on a working demo site. The same thing from a terminal: `dockyard setup`.
 
 ### Highlights
