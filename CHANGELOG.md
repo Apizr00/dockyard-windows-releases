@@ -3,6 +3,19 @@
 All notable changes to Dockyard. The format follows [Keep a Changelog](https://keepachangelog.com/), and versions
 follow [Semantic Versioning](https://semver.org/).
 
+## [0.2.8] - 2026-10-18
+
+### Fixed
+- **Programs are started one at a time.** Windows gives a new program every output pipe the app has open at that moment, so with several services starting side by side (the usual case at launch) a helper such as `nginx -t` or a database's first-run setup could in principle be left waiting for an unrelated service to exit. I could not make this fail in the real app; it is a precaution found while chasing the stall below.
+- **A helper command that ran out of time left what it had started running.** Only the program itself was stopped; now everything it started goes too.
+- **Stopping a service could leave a process behind** that the service started at the very moment it was stopped (the process list is a snapshot). Stopping now looks again until nothing new turns up. This was also the cause of a test that hung for two minutes once in a while.
+- `dockyard update install` now says "Dockyard is restarting to install the update." instead of "closed the connection without an answer".
+
+### Changed
+- **The Dashboard is much lighter on the processor** while it is open: about 1 % of a core, down from about 7 %. The gauge and the meters no longer animate on every reading, and a reading or a log line redraws only what changed instead of the whole page. Other pages redraw less, too.
+- **Logs no longer grow without end:** the program log keeps the last 14 days, and each service's log (and nginx's access log) starts afresh at 5 MB, the old one kept as `.1`.
+- `dockyard launch` (hidden) hands launch flags such as `--open` or `--quit` to the running app; the test suites use it.
+
 ## [0.2.7] - 2026-10-18
 
 ### Added
